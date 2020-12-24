@@ -8,6 +8,9 @@ let boxWidthHeight = 20;
 let boxBorderWidth = 1;
 let boxSize = boxWidthHeight + boxBorderWidth;
 
+let cssBoxWidthHeight = boxWidthHeight + "px";
+let cssBoxBorderWidth = boxBorderWidth + "px";
+
 // external stylesheet's list of rules
 const styleSheetList = document.styleSheets;
 let styleSheet = styleSheetList[0];
@@ -33,7 +36,7 @@ for (i = 0; i < gridWidth; i++) {
     for (j = 0; j < gridHeight; j++) {
         const box = document.createElement('div');
         // sets dynamic inline style instead of stylesheet class
-        box.setAttribute('style', `width: ${boxWidthHeight}; height: ${boxWidthHeight}; border-width: ${boxBorderWidth};`);
+        box.setAttribute('style', `width: ${cssBoxWidthHeight}; height: ${cssBoxWidthHeight}; border-width: ${cssBoxBorderWidth};`);
         box.classList.add('box');
         container.appendChild(box);
     }
