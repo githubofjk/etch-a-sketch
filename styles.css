@@ -2,12 +2,12 @@
     display: grid;
 }
 
-.box-base {
+.box {
     border-color: black;
     border-style: solid;
 }
 
-.box-base:hover {
+.box:hover {
     background-color: crimson;
 }
 
