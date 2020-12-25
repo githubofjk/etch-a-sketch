@@ -1,5 +1,9 @@
 #container {
     display: grid;
+    border-color: black;
+    border-style: solid;
+    height: 480px;
+    width: 480px;
 }
 
 .box {
