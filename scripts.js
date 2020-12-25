@@ -1,3 +1,4 @@
+const btnReset = document.querySelector('#btnReset');
 const container = document.querySelector('#container');
 
 // set grid size and box sizes
@@ -48,5 +49,11 @@ function trail(e) {
     e.target.classList.add('trail');
 }
 
+function reset(e) {
+    boxes.forEach(box => box.classList.remove('trail'));
+}
+
 const boxes = Array.from(document.querySelectorAll('.box'));
 boxes.forEach(box => box.addEventListener('mouseover', trail));
+
+btnReset.addEventListener('click', reset);
