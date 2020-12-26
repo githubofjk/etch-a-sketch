@@ -1,4 +1,4 @@
-const btnReset = document.querySelector('#btnReset');
+const btnChangeSize = document.querySelector('#btnChangeSize');
 const container = document.querySelector('#container');
 
 let boxes;
@@ -54,7 +54,7 @@ function trail(e) {
     e.target.classList.add('trail');
 }
 
-function reset(e) {
+function changeSize(e) {
     boxes.forEach(box => box.classList.remove('trail'));
     // ask for user input for gridSize
     gridSizeUser = prompt("Grid size?: ");
@@ -69,7 +69,7 @@ function reset(e) {
     createBoxes(gridSize, cssBoxBorderWidth);
 }
 
-btnReset.addEventListener('click', reset);
+btnChangeSize.addEventListener('click', changeSize);
 
 gridSize = grid(gridSizeUser);
 gridCreate(gridSize);
